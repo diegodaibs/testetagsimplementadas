@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mente Plena | Psicologia & Bem-Estar</title>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KGRBR4J4');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1157BH0QJ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1157BH0QJ9');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sage: #7a9e7e;
+      --sage-light: #a8c5ab;
+      --cream: #f7f3ee;
+      --warm-white: #fdfaf6;
+      --charcoal: #2c2c2c;
+      --muted: #7a7570;
+      --accent: #c4956a;
+      --accent-light: #e8cdb0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--warm-white);
+      color: var(--charcoal);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ─────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 3rem;
+      background: rgba(253, 250, 246, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--accent-light);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--sage); }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1px;
+      background: var(--accent);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--charcoal); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      background: var(--sage);
+      color: #fff !important;
+      padding: 0.55rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 500 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--charcoal) !important; }
+    .nav-cta::after { display: none !important; }
+
+    /* ── HERO ────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 8rem 3rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 70% at 80% 50%, rgba(168, 197, 171, 0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(196, 149, 106, 0.1) 0%, transparent 60%);
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 680px;
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 6vw, 5rem);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--charcoal);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--sage);
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 2.5rem;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--charcoal);
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .btn-primary:hover { background: var(--sage); transform: translateY(-1px); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: var(--charcoal);
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid var(--accent-light);
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, transform 0.15s;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      background: rgba(196,149,106,0.06);
+      transform: translateY(-1px);
+    }
+
+    /* ── SERVIÇOS ─────────────────────────────────────────── */
+    .section {
+      padding: 6rem 3rem;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .section-sub {
+      color: var(--muted);
+      max-width: 480px;
+      font-weight: 300;
+      margin-bottom: 3rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--cream);
+      border-radius: 16px;
+      padding: 2rem;
+      cursor: pointer;
+      transition: transform 0.25s, box-shadow 0.25s;
+      border: 1px solid transparent;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+      border-color: var(--accent-light);
+    }
+
+    .card-icon {
+      width: 48px; height: 48px;
+      background: var(--sage-light);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    /* ── DEPOIMENTOS ──────────────────────────────────────── */
+    .testimonials {
+      background: var(--cream);
+      padding: 6rem 3rem;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial {
+      background: var(--warm-white);
+      border-radius: 16px;
+      padding: 2rem;
+      border-left: 3px solid var(--sage);
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--charcoal);
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .testimonial-author {
+      font-weight: 500;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ── CTA BANNER ───────────────────────────────────────── */
+    .cta-banner {
+      background: var(--charcoal);
+      color: #fff;
+      padding: 5rem 3rem;
+      text-align: center;
+    }
+
+    .cta-banner h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .cta-banner p {
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .cta-banner .btn-primary {
+      background: var(--sage);
+    }
+
+    .cta-banner .btn-primary:hover { background: var(--accent); }
+
+    /* ── FOOTER ───────────────────────────────────────────── */
+    footer {
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--accent-light);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--charcoal); }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── TOAST ────────────────────────────────────────────── */
+    #toast {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      background: var(--charcoal);
+      color: #fff;
+      padding: 0.8rem 1.4rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s;
+      pointer-events: none;
+      z-index: 999;
+      max-width: 280px;
+    }
+
+    #toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── ANIMATIONS ───────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate { animation: fadeUp 0.7s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+
+    @media (max-width: 640px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { gap: 1.2rem; }
+      .hero, .section, .testimonials { padding-left: 1.5rem; padding-right: 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGRBR4J4"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="#" class="logo">Mente<span>Plena</span></a>
+    <ul class="nav-links">
+      <li><a href="#" onclick="trackNav('Home')">Home</a></li>
+      <li><a href="#servicos" onclick="trackNav('Serviços')">Serviços</a></li>
+      <li><a href="#" onclick="trackNav('Sobre')">Sobre</a></li>
+      <li><a href="#" onclick="trackNav('Contato')">Contato</a></li>
+      <li><a href="#" class="nav-cta" onclick="trackNav('Agenda'); trackCTA('nav_agenda')">Agendar</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Psicologia Clínica & Bem-Estar</p>
+      <h1>Cuide da sua <em>mente</em> com quem entende</h1>
+      <p>Um espaço seguro e acolhedor para você desenvolver autoconhecimento, equilíbrio emocional e qualidade de vida.</p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="trackCTA('hero_agendar_consulta')">
+          📅 Agendar Consulta
+        </button>
+        <button class="btn-secondary" onclick="trackCTA('hero_conhecer_servicos')">
+          Conhecer Serviços →
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="section" id="servicos">
+    <p class="section-label animate">O que oferecemos</p>
+    <h2 class="section-title animate delay-1">Serviços especializados<br>para cada momento da sua vida</h2>
+    <p class="section-sub animate delay-2">Atendimento presencial e online, com abordagem humanizada e baseada em evidências.</p>
+
+    <div class="cards-grid">
+      <a href="#" class="card animate delay-1" onclick="trackCard('Psicoterapia Individual')">
+        <div class="card-icon">🧠</div>
+        <h3>Psicoterapia Individual</h3>
+        <p>Sessões personalizadas para explorar emoções, comportamentos e desenvolver estratégias de enfrentamento.</p>
+      </a>
+      <a href="#" class="card animate delay-2" onclick="trackCard('Terapia de Casal')">
+        <div class="card-icon">💑</div>
+        <h3>Terapia de Casal</h3>
+        <p>Apoio especializado para melhorar a comunicação, resolver conflitos e fortalecer o relacionamento.</p>
+      </a>
+      <a href="#" class="card animate delay-3" onclick="trackCard('Psicologia Infantil')">
+        <div class="card-icon">🌱</div>
+        <h3>Psicologia Infantil</h3>
+        <p>Suporte para crianças e adolescentes nos desafios do desenvolvimento emocional e comportamental.</p>
+      </a>
+      <a href="#" class="card animate delay-1" onclick="trackCard('Atendimento Online')">
+        <div class="card-icon">💻</div>
+        <h3>Atendimento Online</h3>
+        <p>Toda a qualidade do atendimento presencial, com a praticidade e o conforto de onde você estiver.</p>
+      </a>
+      <a href="#" class="card animate delay-2" onclick="trackCard('Avaliação Psicológica')">
+        <div class="card-icon">📋</div>
+        <h3>Avaliação Psicológica</h3>
+        <p>Laudos e avaliações para fins clínicos, escolares ou profissionais com rigor técnico e ético.</p>
+      </a>
+      <a href="#" class="card animate delay-3" onclick="trackCard('Mindfulness')">
+        <div class="card-icon">🧘</div>
+        <h3>Mindfulness & Bem-Estar</h3>
+        <p>Práticas de atenção plena para redução do estresse, ansiedade e promoção do equilíbrio interior.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section class="testimonials">
+    <p class="section-label">Depoimentos</p>
+    <h2 class="section-title">O que nossos pacientes dizem</h2>
+
+    <div class="testimonials-grid">
+      <div class="testimonial" onclick="trackTestimonial('Ana')">
+        <p class="testimonial-text">"A terapia mudou completamente minha relação comigo mesma. Me sinto mais segura e capaz de enfrentar os desafios do dia a dia."</p>
+        <span class="testimonial-author">— Ana S., 34 anos</span>
+      </div>
+      <div class="testimonial" onclick="trackTestimonial('Carlos')">
+        <p class="testimonial-text">"Finalmente consegui entender de onde vinham minha ansiedade e meus bloqueios. O atendimento é muito acolhedor e profissional."</p>
+        <span class="testimonial-author">— Carlos M., 41 anos</span>
+      </div>
+      <div class="testimonial" onclick="trackTestimonial('Juliana')">
+        <p class="testimonial-text">"A terapia de casal nos salvou. Hoje nos comunicamos muito melhor e nossa relação está mais leve e feliz."</p>
+        <span class="testimonial-author">— Juliana e Ricardo, clientes</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2>Pronto para começar sua jornada?</h2>
+    <p>Dê o primeiro passo. A primeira sessão é o início de uma nova fase.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <button class="btn-primary" onclick="trackCTA('banner_agendar_agora')">
+        📅 Agendar Agora
+      </button>
+      <button class="btn-secondary" style="color:#fff; border-color:rgba(255,255,255,0.3);" onclick="trackCTA('banner_falar_whatsapp')">
+        💬 Falar pelo WhatsApp
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#" class="logo">Mente<span>Plena</span></a>
+    <ul class="footer-links">
+      <li><a href="#" onclick="trackNav('Footer: Sobre')">Sobre</a></li>
+      <li><a href="#" onclick="trackNav('Footer: Serviços')">Serviços</a></li>
+      <li><a href="#" onclick="trackNav('Footer: Agenda')">Agenda</a></li>
+      <li><a href="#" onclick="trackNav('Footer: Contato')">Contato</a></li>
+      <li><a href="#" onclick="trackNav('Footer: Privacidade')">Privacidade</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 MentePlena — Ambiente de teste GTM/GA</p>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast"></div>
+
+  <script>
+    // ── dataLayer helpers ─────────────────────────────────────
+    window.dataLayer = window.dataLayer || [];
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(t._timer);
+      t._timer = setTimeout(() => t.classList.remove('show'), 2800);
+    }
+
+    // Clique em link de navegação
+    function trackNav(label) {
+      dataLayer.push({ event: 'nav_click', link_label: label });
+      showToast('🔗 Evento: nav_click — ' + label);
+    }
+
+    // Clique em botão CTA
+    function trackCTA(id) {
+      dataLayer.push({ event: 'cta_click', cta_id: id });
+      showToast('🎯 Evento: cta_click — ' + id);
+    }
+
+    // Clique em card de serviço
+    function trackCard(service) {
+      dataLayer.push({ event: 'service_click', service_name: service });
+      showToast('🃏 Evento: service_click — ' + service);
+    }
+
+    // Clique em depoimento
+    function trackTestimonial(author) {
+      dataLayer.push({ event: 'testimonial_click', author: author });
+      showToast('💬 Evento: testimonial_click — ' + author);
+    }
+
+    // ── Nav scroll effect ─────────────────────────────────────
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ── Scroll depth tracking (25%, 50%, 75%, 100%) ───────────
+    const depths = [25, 50, 75, 100];
+    const fired  = new Set();
+    window.addEventListener('scroll', () => {
+      const pct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+      depths.forEach(d => {
+        if (pct >= d && !fired.has(d)) {
+          fired.add(d);
+          dataLayer.push({ event: 'scroll_depth', depth_pct: d });
+          showToast('📏 Evento: scroll_depth — ' + d + '%');
+        }
+      });
+    });
+
+    // ── Page view ─────────────────────────────────────────────
+    dataLayer.push({ event: 'page_view', page_title: document.title });
+    console.log('%c🏷 MentePlena GTM/GA Test Site', 'color:#7a9e7e;font-size:14px;font-weight:bold;');
+    console.log('%cAbra o GTM Preview ou o GA DebugView para ver os eventos disparando.', 'color:#7a7570;font-size:12px;');
+  </script>
+
+</body>
+</html>
