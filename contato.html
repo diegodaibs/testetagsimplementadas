@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contato | Mente Plena — Psicologia & Bem-Estar</title>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KGRBR4J4');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1157BH0QJ9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-1157BH0QJ9');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --sage: #7a9e7e;
+      --sage-light: #a8c5ab;
+      --cream: #f7f3ee;
+      --warm-white: #fdfaf6;
+      --charcoal: #2c2c2c;
+      --muted: #7a7570;
+      --accent: #c4956a;
+      --accent-light: #e8cdb0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--warm-white);
+      color: var(--charcoal);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ─────────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.2rem 3rem;
+      background: rgba(253, 250, 246, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--accent-light);
+      transition: box-shadow 0.3s;
+    }
+
+    nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      letter-spacing: 0.02em;
+      text-decoration: none;
+    }
+
+    .logo span { color: var(--sage); }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1px;
+      background: var(--accent);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover { color: var(--charcoal); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-links a.active { color: var(--charcoal); }
+    .nav-links a.active::after { width: 100%; background: var(--sage); }
+
+    .nav-cta {
+      background: var(--sage);
+      color: #fff !important;
+      padding: 0.55rem 1.4rem;
+      border-radius: 50px;
+      font-weight: 500 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--charcoal) !important; }
+    .nav-cta::after { display: none !important; }
+
+    /* ── PAGE HEADER ─────────────────────────────────────── */
+    .page-header {
+      padding: 10rem 3rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-header-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 60% at 90% 40%, rgba(168, 197, 171, 0.15) 0%, transparent 70%),
+        radial-gradient(ellipse 35% 45% at 5% 90%, rgba(196, 149, 106, 0.08) 0%, transparent 60%);
+    }
+
+    .page-header-content {
+      position: relative;
+      max-width: 680px;
+      animation: fadeUp 0.9s ease both;
+    }
+
+    .page-eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--charcoal);
+      margin-bottom: 1.2rem;
+    }
+
+    .page-header h1 em {
+      font-style: italic;
+      color: var(--sage);
+    }
+
+    .page-header p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 500px;
+      font-weight: 300;
+    }
+
+    /* ── CONTACT LAYOUT ──────────────────────────────────── */
+    .contact-section {
+      padding: 4rem 3rem 6rem;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ── INFO COLUMN ─────────────────────────────────────── */
+    .contact-info {
+      animation: fadeUp 0.7s ease 0.1s both;
+    }
+
+    .contact-info-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-info-text {
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      line-height: 1.8;
+    }
+
+    .info-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .info-icon {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      background: var(--cream);
+      border: 1px solid var(--accent-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .info-item-body strong {
+      display: block;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+    }
+
+    .info-item-body span {
+      font-size: 0.93rem;
+      color: var(--muted);
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--accent-light);
+      margin: 2.5rem 0;
+      opacity: 0.6;
+    }
+
+    .availability-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(122, 158, 126, 0.1);
+      border: 1px solid rgba(122, 158, 126, 0.25);
+      color: var(--sage);
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.45rem 1rem;
+      border-radius: 50px;
+      letter-spacing: 0.03em;
+    }
+
+    .availability-badge::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: var(--sage);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    /* ── FORM COLUMN ─────────────────────────────────────── */
+    .form-wrapper {
+      background: #fff;
+      border: 1px solid var(--accent-light);
+      border-radius: 20px;
+      padding: 2.8rem 3rem;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.04);
+      animation: fadeUp 0.7s ease 0.2s both;
+    }
+
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-subtitle {
+      font-size: 0.88rem;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 2.2rem;
+    }
+
+    .form-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .field-group label {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      font-weight: 500;
+    }
+
+    .field-group label span {
+      color: var(--accent);
+    }
+
+    .field-group input {
+      width: 100%;
+      padding: 0.82rem 1.1rem;
+      border: 1.5px solid var(--accent-light);
+      border-radius: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      background: var(--warm-white);
+      outline: none;
+      transition: border-color 0.25s, box-shadow 0.25s, background 0.2s;
+    }
+
+    .field-group input::placeholder {
+      color: #bbb;
+      font-weight: 300;
+    }
+
+    .field-group input:focus {
+      border-color: var(--sage);
+      background: #fff;
+      box-shadow: 0 0 0 3px rgba(122, 158, 126, 0.12);
+    }
+
+    .field-group input.error {
+      border-color: #d9534f;
+      box-shadow: 0 0 0 3px rgba(217, 83, 79, 0.1);
+    }
+
+    .field-error {
+      font-size: 0.78rem;
+      color: #d9534f;
+      font-weight: 400;
+      display: none;
+    }
+
+    .field-error.visible { display: block; }
+
+    .phone-hint {
+      font-size: 0.76rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    /* Checkbox */
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      margin-top: 0.3rem;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 17px; height: 17px;
+      flex-shrink: 0;
+      accent-color: var(--sage);
+      cursor: pointer;
+      margin-top: 3px;
+    }
+
+    .checkbox-group label {
+      font-size: 0.84rem;
+      color: var(--muted);
+      font-weight: 300;
+      line-height: 1.5;
+      cursor: pointer;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .checkbox-group label a {
+      color: var(--sage);
+      text-decoration: none;
+    }
+
+    .checkbox-group label a:hover { text-decoration: underline; }
+
+    /* Submit button */
+    .btn-submit {
+      width: 100%;
+      padding: 1rem;
+      background: var(--charcoal);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-submit:hover:not(:disabled) {
+      background: var(--sage);
+      transform: translateY(-1px);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    .btn-submit .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid rgba(255,255,255,0.4);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.7s linear infinite;
+      display: none;
+    }
+
+    .btn-submit.loading .spinner { display: block; }
+    .btn-submit.loading .btn-text { display: none; }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem 0;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .form-success.visible { display: block; }
+
+    .success-icon {
+      width: 64px; height: 64px;
+      background: rgba(122, 158, 126, 0.12);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin: 0 auto 1.2rem;
+    }
+
+    .form-success h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 0.6rem;
+    }
+
+    .form-success p {
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 320px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--accent-light);
+      padding: 2.5rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--charcoal); }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── TOAST ────────────────────────────────────────────── */
+    #toast {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      background: var(--charcoal);
+      color: #fff;
+      padding: 0.8rem 1.4rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s, transform 0.3s;
+      pointer-events: none;
+      z-index: 999;
+      max-width: 300px;
+    }
+
+    #toast.show { opacity: 1; transform: translateY(0); }
+
+    /* ── ANIMATIONS ───────────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ───────────────────────────────────────── */
+    @media (max-width: 768px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { gap: 1.2rem; }
+      .page-header { padding: 8rem 1.5rem 3rem; }
+      .contact-section {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 2.5rem 1.5rem 4rem;
+      }
+      .form-wrapper { padding: 2rem 1.5rem; }
+      footer { padding: 2rem 1.5rem; flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGRBR4J4"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <a href="index.html" class="logo">Mente<span>Plena</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" onclick="trackNav('Home')">Home</a></li>
+      <li><a href="index.html#servicos" onclick="trackNav('Serviços')">Serviços</a></li>
+      <li><a href="#" onclick="trackNav('Sobre')">Sobre</a></li>
+      <li><a href="contato.html" class="active" onclick="trackNav('Contato')">Contato</a></li>
+      <li><a href="#" class="nav-cta" onclick="trackNav('Agenda'); trackCTA('nav_agenda')">Agendar</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-bg"></div>
+    <div class="page-header-content">
+      <p class="page-eyebrow">Estamos aqui por você</p>
+      <h1>Entre em <em>contato</em></h1>
+      <p>Tire suas dúvidas, conheça melhor nossos serviços ou agende sua primeira consulta. Responderemos com atenção e cuidado.</p>
+    </div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+
+    <!-- INFO -->
+    <div class="contact-info">
+      <h2 class="contact-info-title">Ficou alguma dúvida?</h2>
+      <p class="contact-info-text">Preencha o formulário ao lado e nossa equipe entrará em contato em até 24 horas. Se preferir, use um dos canais abaixo.</p>
+
+      <div class="info-items">
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div class="info-item-body">
+            <strong>Endereço</strong>
+            <span>Rua das Flores, 210 — Jardins, São Paulo/SP</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div class="info-item-body">
+            <strong>Telefone</strong>
+            <span>(11) 9 9999-0000</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div class="info-item-body">
+            <strong>E-mail</strong>
+            <span>contato@menteplena.com.br</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🕐</div>
+          <div class="info-item-body">
+            <strong>Horário de Atendimento</strong>
+            <span>Segunda a sexta, das 8h às 20h</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <span class="availability-badge">Vagas disponíveis para novos pacientes</span>
+    </div>
+
+    <!-- FORM -->
+    <div class="form-wrapper">
+      <h2 class="form-title">Envie sua mensagem</h2>
+      <p class="form-subtitle">Todos os campos marcados com <span style="color:var(--accent)">*</span> são obrigatórios.</p>
+
+      <div id="contactForm" class="form-grid">
+
+        <!-- Nome Completo -->
+        <div class="field-group">
+          <label for="nome">Nome Completo <span>*</span></label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Ex.: Maria da Silva"
+            autocomplete="name"
+            oninput="handleFieldInput('nome')"
+            onfocus="trackFieldFocus('nome_completo')"
+            onblur="trackFieldBlur('nome_completo')"
+          />
+          <span class="field-error" id="error-nome">Por favor, informe seu nome completo.</span>
+        </div>
+
+        <!-- E-mail -->
+        <div class="field-group">
+          <label for="email">E-mail <span>*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Ex.: maria@email.com"
+            autocomplete="email"
+            oninput="handleFieldInput('email')"
+            onfocus="trackFieldFocus('email')"
+            onblur="trackFieldBlur('email')"
+          />
+          <span class="field-error" id="error-email">Por favor, informe um e-mail válido.</span>
+        </div>
+
+        <!-- Telefone -->
+        <div class="field-group">
+          <label for="telefone">Telefone / WhatsApp <span>*</span></label>
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="Ex.: (11) 9 9999-0000"
+            autocomplete="tel"
+            maxlength="16"
+            oninput="maskPhone(this); handleFieldInput('telefone')"
+            onfocus="trackFieldFocus('telefone')"
+            onblur="trackFieldBlur('telefone')"
+          />
+          <span class="phone-hint">Também aceitamos contato via WhatsApp.</span>
+          <span class="field-error" id="error-telefone">Por favor, informe um telefone com DDD.</span>
+        </div>
+
+        <!-- Consentimento -->
+        <div class="checkbox-group">
+          <input type="checkbox" id="consentimento" onchange="trackConsent(this.checked)" />
+          <label for="consentimento">
+            Li e concordo com a <a href="#" onclick="trackNav('Política de Privacidade')">Política de Privacidade</a> e autorizo o contato pela MentePlena. <span style="color:var(--accent)">*</span>
+          </label>
+        </div>
+        <span class="field-error" id="error-consentimento">É necessário aceitar a Política de Privacidade para continuar.</span>
+
+        <!-- Submit -->
+        <button class="btn-submit" id="btnEnviar" onclick="submitForm()">
+          <span class="btn-text">✉️&nbsp; Enviar Mensagem</span>
+          <span class="spinner"></span>
+        </button>
+
+      </div>
+
+      <!-- Success message -->
+      <div class="form-success" id="formSuccess">
+        <div class="success-icon">✅</div>
+        <h3>Mensagem enviada!</h3>
+        <p>Recebemos seu contato e retornaremos em até 24 horas. Fique de olho no seu e-mail. 💚</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html" class="logo">Mente<span>Plena</span></a>
+    <ul class="footer-links">
+      <li><a href="#" onclick="trackNav('Footer: Sobre')">Sobre</a></li>
+      <li><a href="index.html#servicos" onclick="trackNav('Footer: Serviços')">Serviços</a></li>
+      <li><a href="#" onclick="trackNav('Footer: Agenda')">Agenda</a></li>
+      <li><a href="contato.html" onclick="trackNav('Footer: Contato')">Contato</a></li>
+      <li><a href="#" onclick="trackNav('Footer: Privacidade')">Privacidade</a></li>
+    </ul>
+    <p class="footer-copy">© 2025 MentePlena — Ambiente de teste GTM/GA</p>
+  </footer>
+
+  <!-- TOAST -->
+  <div id="toast"></div>
+
+  <script>
+    // ── dataLayer helpers ─────────────────────────────────────
+    window.dataLayer = window.dataLayer || [];
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(t._timer);
+      t._timer = setTimeout(() => t.classList.remove('show'), 2800);
+    }
+
+    // Clique em link de navegação
+    function trackNav(label) {
+      dataLayer.push({ event: 'nav_click', link_label: label });
+      showToast('🔗 Evento: nav_click — ' + label);
+    }
+
+    // Clique em botão CTA
+    function trackCTA(id) {
+      dataLayer.push({ event: 'cta_click', cta_id: id });
+      showToast('🎯 Evento: cta_click — ' + id);
+    }
+
+    // ── EVENTOS DO FORMULÁRIO ─────────────────────────────────
+
+    // Usuário foca em um campo
+    function trackFieldFocus(fieldName) {
+      dataLayer.push({
+        event: 'form_field_focus',
+        form_name: 'contato',
+        field_name: fieldName
+      });
+    }
+
+    // Usuário sai de um campo (blur)
+    function trackFieldBlur(fieldName) {
+      const fieldMap = { nome_completo: 'nome', email: 'email', telefone: 'telefone' };
+      const inputId  = fieldMap[fieldName] || fieldName;
+      const el       = document.getElementById(inputId);
+      const filled   = el && el.value.trim().length > 0;
+
+      dataLayer.push({
+        event: 'form_field_blur',
+        form_name: 'contato',
+        field_name: fieldName,
+        field_filled: filled
+      });
+    }
+
+    // Consentimento marcado/desmarcado
+    function trackConsent(checked) {
+      dataLayer.push({
+        event: 'form_consent_change',
+        form_name: 'contato',
+        consent_given: checked
+      });
+      showToast(checked ? '✅ Consentimento registrado' : '⬜ Consentimento removido');
+    }
+
+    // Tentativa de envio com erro de validação
+    function trackFormError(fields) {
+      dataLayer.push({
+        event: 'form_error',
+        form_name: 'contato',
+        error_fields: fields.join(',')
+      });
+      showToast('⚠️ Evento: form_error — ' + fields.join(', '));
+    }
+
+    // Envio iniciado (clique em enviar, antes da resposta)
+    function trackFormSubmit(userData) {
+      dataLayer.push({
+        event: 'form_submit',
+        form_name: 'contato',
+        form_location: 'pagina_contato',
+        ...userData
+      });
+      showToast('📤 Evento: form_submit');
+    }
+
+    // Envio concluído com sucesso
+    function trackFormSuccess(userData) {
+      dataLayer.push({
+        event: 'form_success',
+        form_name: 'contato',
+        form_location: 'pagina_contato',
+        ...userData
+      });
+      showToast('🎉 Evento: form_success — Formulário enviado!');
+    }
+
+    // ── MÁSCARA DE TELEFONE ───────────────────────────────────
+    function maskPhone(el) {
+      let v = el.value.replace(/\D/g, '').slice(0, 11);
+      if (v.length > 10) {
+        v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+      } else if (v.length > 6) {
+        v = v.replace(/^(\d{2})(\d{4})(\d*)$/, '($1) $2-$3');
+      } else if (v.length > 2) {
+        v = v.replace(/^(\d{2})(\d*)$/, '($1) $2');
+      } else if (v.length > 0) {
+        v = v.replace(/^(\d*)$/, '($1');
+      }
+      el.value = v;
+    }
+
+    // ── VALIDAÇÃO ─────────────────────────────────────────────
+    function handleFieldInput(fieldId) {
+      const input = document.getElementById(fieldId);
+      if (!input) return;
+      input.classList.remove('error');
+      const errEl = document.getElementById('error-' + fieldId);
+      if (errEl) errEl.classList.remove('visible');
+    }
+
+    function validateForm() {
+      const nome      = document.getElementById('nome').value.trim();
+      const email     = document.getElementById('email').value.trim();
+      const telefone  = document.getElementById('telefone').value.replace(/\D/g,'');
+      const consent   = document.getElementById('consentimento').checked;
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      let errors = [];
+
+      if (nome.split(' ').length < 2 || nome.length < 4) {
+        document.getElementById('nome').classList.add('error');
+        document.getElementById('error-nome').classList.add('visible');
+        errors.push('nome_completo');
+      }
+
+      if (!emailRegex.test(email)) {
+        document.getElementById('email').classList.add('error');
+        document.getElementById('error-email').classList.add('visible');
+        errors.push('email');
+      }
+
+      if (telefone.length < 10) {
+        document.getElementById('telefone').classList.add('error');
+        document.getElementById('error-telefone').classList.add('visible');
+        errors.push('telefone');
+      }
+
+      if (!consent) {
+        document.getElementById('error-consentimento').classList.add('visible');
+        errors.push('consentimento');
+      }
+
+      return errors;
+    }
+
+    // ── ENVIO DO FORMULÁRIO ───────────────────────────────────
+    function submitForm() {
+      const errors = validateForm();
+
+      if (errors.length > 0) {
+        trackFormError(errors);
+        return;
+      }
+
+      const nome     = document.getElementById('nome').value.trim();
+      const email    = document.getElementById('email').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+
+      // Dados anonimizados para o dataLayer (sem PII sensível)
+      const userData = {
+        has_name:    nome.length > 0,
+        has_email:   email.length > 0,
+        has_phone:   telefone.length > 0,
+        email_domain: email.split('@')[1] || ''   // ex.: gmail.com — não identifica o usuário
+      };
+
+      trackFormSubmit(userData);
+
+      // Simula loading
+      const btn = document.getElementById('btnEnviar');
+      btn.classList.add('loading');
+      btn.disabled = true;
+
+      setTimeout(() => {
+        trackFormSuccess(userData);
+
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('formSuccess').classList.add('visible');
+
+        btn.classList.remove('loading');
+        btn.disabled = false;
+      }, 1600);
+    }
+
+    // ── Nav scroll effect ─────────────────────────────────────
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // ── Scroll depth tracking (25 / 50 / 75 / 100 %) ─────────
+    const depths = [25, 50, 75, 100];
+    const fired  = new Set();
+    window.addEventListener('scroll', () => {
+      const pct = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+      depths.forEach(d => {
+        if (pct >= d && !fired.has(d)) {
+          fired.add(d);
+          dataLayer.push({ event: 'scroll_depth', depth_pct: d });
+          showToast('📏 Evento: scroll_depth — ' + d + '%');
+        }
+      });
+    });
+
+    // ── Page view ─────────────────────────────────────────────
+    dataLayer.push({
+      event: 'page_view',
+      page_title: document.title,
+      page_type: 'contato'
+    });
+
+    // ── Form view (formulário visível na tela) ────────────────
+    const formObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          dataLayer.push({ event: 'form_view', form_name: 'contato' });
+          showToast('👁 Evento: form_view — formulário visível');
+          formObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+
+    formObserver.observe(document.getElementById('contactForm'));
+
+    console.log('%c🏷 MentePlena GTM/GA Test Site — Página de Contato', 'color:#7a9e7e;font-size:14px;font-weight:bold;');
+    console.log('%cEventos de formulário: form_view, form_field_focus, form_field_blur, form_consent_change, form_error, form_submit, form_success', 'color:#7a7570;font-size:12px;');
+  </script>
+
+</body>
+</html>
